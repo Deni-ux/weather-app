@@ -42,3 +42,30 @@ function showWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+
+function searchCity(city){
+  let apiKey = "b2694a5d8f39bb351277f910bc5d27c4";
+
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(showWeather);
+
+}
+
+function showCities(event){
+    event.preventDefault();
+
+    let city = document.querySelector("#search-input");
+    searchCity(city);
+}
+let form=document.querySelector("#search-loation");
+form.addEventListener("click",showCities);
+
+function showPosition(position){
+    let apiKey = "b2694a5d8f39bb351277f910bc5d27c4";
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+ 
+  axios.get(apiUrl).then(showWeather);
+}
