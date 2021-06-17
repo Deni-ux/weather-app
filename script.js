@@ -52,14 +52,14 @@ function searchCity(city){
 
 }
 
-function showCities(event){
+function showCity(event){
     event.preventDefault();
 
     let city = document.querySelector("#search-input");
     searchCity(city);
 }
-let form=document.querySelector("#search-loation");
-form.addEventListener("click",showCities);
+let form=document.querySelector("#search-location");
+form.addEventListener("click",showCity);
 
 function showPosition(position){
     let apiKey = "b2694a5d8f39bb351277f910bc5d27c4";
