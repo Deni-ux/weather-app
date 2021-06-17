@@ -12,5 +12,43 @@
       crossorigin="anonymous"
     />
   </head>
-  <body></body>
+  <body>
+       <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h1 id="user-city">London</h1>
+
+          <p id="displayDate">MON,10/05, 19:00</p>
+          <br />
+          <section class="temperature">
+            <h2 id="temperature">15</h2>
+            <span class="units">
+              <a href="#" id="celsius-link">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+            <p>
+              <span id="temp-min"> 8°| </span>
+              <span id="temp-max"><strong>16°</strong></span>
+            </p>
+          </section>
+        </div>
+        <div class="col-6">
+          <form id="search-form">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search city.."
+                autocomplete="off"
+                autofocus="on"
+                id="search-input"
+              />
+              <button
+                type="button"
+                class="btn btn-primary btn-sm"
+                id="search-location"
+              >
+                🔎
+              </button>
+  </body>
 </html>
