@@ -69,3 +69,11 @@ function showPosition(position){
  
   axios.get(apiUrl).then(showWeather);
 }
+
+function getLocalPosition(event){
+    event.preventDefault();
+
+    navigator.geolocation.getCurrentPosition(showPosition);
+}
+let button = document.querySelector("#current-location");
+button.addEventListener("click",getLocalPosition);
